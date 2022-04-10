@@ -15,9 +15,6 @@ public:
 
 	void setPendidikan(int pendidikan);
 	int getPendidikan();
-
-	std::string getNPP();
-	std::string getDepartemen();
 };
 
 #endif 
