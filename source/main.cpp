@@ -35,16 +35,120 @@ int main(int argc, char** argv)
 
 		switch (menu_terpilih) {
 			case 1:
+				{
+					int dd, mm, yy, tahunmasuk;
+					string id, nama, departemen, nrp;
+					cout << "Masukkan id: ";
+					cin >> id;
+					cout << "Masukkan nama: ";
+					cin >> nama;
+					cout << "Masukkan tanggal lahir: ";
+					cin >> dd;
+					cout << "Masukkan bulan lahir: ";
+					cin >> mm;
+					cout << "Masukkan tahun lahir: ";
+					cin >> yy;
+					cout << "Masukkan departemen: ";
+					cin >> departemen;
+					cout << "Masukkan nrp: ";
+					cin >> nrp;
+					cout << "Masukkan tahun masuk: ";
+					cin >> tahunmasuk;
+					mahasiswa mhs(id, nama, dd, mm, yy, nrp, departemen, tahunmasuk);
+					recMhs.push_back(mhs);
+				}
 				break;
 			case 2:
+				{
+					int dd, mm, yy, pendidikan;
+					string id, nama, departemen, npp;
+					cout << "Masukkan id: ";
+					cin >> id;
+					cout << "Masukkan nama: ";
+					cin >> nama;
+					cout << "Masukkan tgl lahir: ";
+					cin >> dd;
+					cout << "Masukkan bln lahir: ";
+					cin >> mm;
+					cout << "Masukkan thn lahir: ";
+					cin >> yy;
+					cout << "Masukkan departemen: ";
+					cin >> departemen;
+					cout << "Masukkan npp: ";
+					cin >> npp;					
+					cout << "Masukkan pendidikan: ";
+					cin >> pendidikan;
+					dosen dsn(id, nama, dd, mm, yy, npp, departemen, pendidikan);
+					recDosen.push_back(dsn);
+				}
 				break;
 			case 3:
+				{
+					int dd, mm, yy;
+					string id, nama, unit, npp;
+					cout << "Masukkan id: ";
+					cin >> id;
+					cout << "Masukkan nama: ";
+					cin >> nama;
+					cout << "Masukkan tgl lahir: ";
+					cin >> dd;
+					cout << "Masukkan bln lahir: ";
+					cin >> mm;
+					cout << "Masukkan thn lahir: ";
+					cin >> yy;
+					cout << "Masukkan unit: ";
+					cin >> unit;
+					cout << "Masukkan npp: ";
+					cin >> npp;
+					tendik tdk(id, nama, dd, mm, yy, npp, unit);
+					recTendik.push_back(tdk);
+				}
 				break;:
 			case 4:
+				{	
+					int n = 0
+					while(n < recMhs.size())
+					{
+						cout << "Nama: "<< recMhs[n].getNama()<< endl;
+						cout << "Tgl lahir: "<<recMhs[n].getTglLahir();
+						cout << "/" <<recMhs[n].getBulanLahir();
+						cout << "/" << recMhs[n].getTahunLahir() << endl;
+						cout << "NRP: " << recMhs[n].getNRP()<< endl;
+						cout << "Departemen: "<< recMhs[n].getDepartemen()<< endl << endl;
+						i++
+					}
+				}
 				break;:
 			case 5:
+				{	
+					int n = 0
+					while(n < recDosen.size())
+					{
+						cout << "Nama: " << recDosen[n].getNama()<< endl;
+						cout << "Tgl lahir: "<< recDosen[n].getTglLahir();
+						cout << "/" <<recDosen[n].getBulanLahir();
+						cout << "/" << recDosen[n].getTahunLahir()<< endl;
+						cout << "NRP: " << recDosen[n].getNPP() << endl;
+						cout << "Pendidikan: S" << recDosen[n].getPendidikan()<< endl;
+						cout << "Departemen: " <<recDosen[n].getDepartemen() << endl << endl;
+						i++
+					}
+				}
 				break;:
 			case 6:
+				{	
+					int n = 0
+					while(n < recTendik.size())
+					{
+						cout << "Nama: " <<recTendik[n].getNama() << endl;
+						cout << "Tgl lahir: "<< recTendik[n].getTglLahir();
+						cout << "/" << recTendik[n].getBulanLahir();
+						cout << "/" << recTendik[n].getTahunLahir() <<endl;
+						cout << "NRP: " <<recTendik[n].getNPP() <<endl;
+						cout << "Unit: " << recTendik[n].getUnit()<< endl;
+						i++
+					}
+				}
 				break;:
 		}
 	}
