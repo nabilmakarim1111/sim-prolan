@@ -38,6 +38,16 @@ void mahasiswa::hitungIPK()
 {
 }
 
+std::string mahasiswa::getDepartemen()
+{
+	return this->departemen;
+}
+
+std::string mahasiswa::getNRP()
+{
+	return this->nrp;
+}
+
 void mahasiswa::setIPS(int semester, float ips)
 {
 	// semester mulai dari 1
