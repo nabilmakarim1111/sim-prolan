@@ -26,7 +26,10 @@ public:
 	int getSKSLulus();
 
 	void hitungIPK();
-
+	
+	std::string getDepartemen();
+	std::string getNRP();
+	
 	void setIPS(int semester, float ips);
 	float getIPS(int semester);
 	std::vector<float> getAllIPS();
