@@ -17,3 +17,13 @@ int dosen::getPendidikan()
 {
 	return this->pendidikan;
 }
+
+std::string dosen::getNPP()
+{
+	return this->npp;
+}
+
+std::string dosen::getDepartemen()
+{
+	return this->departemen;
+}
